@@ -1,0 +1,14 @@
+.grid-controller-button {
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  border-radius: 3px;
+  /* background-color: rgba(255, 0, 80, 0.6); */
+}
+
+h3 {
+  font-family: Futura;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 45px;
+}

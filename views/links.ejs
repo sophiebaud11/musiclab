@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %>. <%= message %></p>
+    <ol>
+      <% for (var i = 0; i < data.length; i++) {  %>
+        <li>
+          <a href= <%= data[i].url %>>
+            <%= data[i].title %>
+          </a>
+        </li>
+      <%  } %>
+    </ol>
+  </body>
+</html>

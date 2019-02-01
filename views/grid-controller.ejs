@@ -2,16 +2,45 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/mk/grid-controller.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div id="instrument">
+      <% for (var i = 0; i < samples.length; i++) {  %>
+          <div class="grid-controller-button"
+              <%-
+                'style="background-color: '
+                + samples[i].color
+                + '"'
+                + 'onclick="playById('
+                + samples[i].id
+                + '")'
+
+                + '"'
+                + ')'
+                onclick="playById('0001')"
+              %>
+          >
+            <h3>
+              <%= samples[i].id %>
+            </h3>
+          </div>
+
+      <%  } %>
+    </div>
     <pre>
-      <%- JSON.stringify(sampleIds) %>
+      <%- JSON.stringify(samples, null, 4) %>
     </pre>
-    <pre>
-      <%- JSON.stringify(randomSampleUrls) %>
-    </pre>
+  <script>
+    console.log("scripting");
+    function playById(id){
+      // var sound = new Audio('car_horn.wav');
+      // sound.play();
+      console.log("trying to play " id);
+    }
+  </script>
   </body>
 </html>

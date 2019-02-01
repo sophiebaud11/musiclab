@@ -13,8 +13,6 @@ router.get('/samples/:sampleId', function(req, res, next) {
   res.render('instrument', { title: ('Sample ' + counter), sampleId: counter, theSoundUrl: soundUrl });
 });
 
-
-
 router.get('/randomsamples', function(req, res, next) {
   var sampleNumbers = []
   for (var i = 0; i < 5438; i++) {
