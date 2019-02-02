@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+
+body {
+  font-family: Futura;
+}
+
+#instrument {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 120px 120px 120px 120px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.grid-controller-button {
+  text-align: center;
+  display: inline-block;
+  /* width: 180px;
+  height: 150px; */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.key-number {
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-size: 50px;
+  margin-top: 30px;
+}
