@@ -17,7 +17,6 @@ for (var i = 0; i < 5438; i++) {
   sampleNumbers.push(("0000" + (i+1)).slice(-4));
 }
 
-var randomSamples = [];
 var gridController = {key: {}};
 
 function prepareTheSound(theBox, theSound, elementIndex){

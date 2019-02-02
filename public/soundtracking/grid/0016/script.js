@@ -17,12 +17,11 @@ for (var i = 0; i < 5438; i++) {
   sampleNumbers.push(("0000" + (i+1)).slice(-4));
 }
 
-var randomSamples = [];
 var gridController = {key: {}};
 
 function prepareTheSound(theBox, theSound, elementIndex){
   theBox.onclick = function() {
-    console.log(elementIndex);
+    console.log("playing " + elementIndex);
     theSound.play();// <-- Prints the number you expect
   };
 }
@@ -39,7 +38,6 @@ for (var i = 0; i < 16; i++) {
     color: theColor,
     url: theUrl
   }
-  // console.log(JSON.stringify(gridController.key[keyId], null, 4));
   var box = document.createElement("div");
   box.id = keyId;
   box.classList.add("grid-controller-button");
