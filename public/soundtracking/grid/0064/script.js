@@ -10,6 +10,8 @@ var controllerColors = [
   "rgba(0, 240, 133, 0.5)",
   "rgba(0, 255, 20, 0.7)",
   "rgba(255, 0, 253, 0.9)",
+  "rgba(255, 0, 150, 0.9)",
+  "rgba(255, 130, 0, 0.95)",
   "rgba(255, 0, 20, 0.9)",
   "rgba(255, 200, 0, 0.95)",
   "rgba(150, 40, 255, 0.8)",
@@ -31,7 +33,7 @@ function prepareTheSound(theBox, theSound, elementIndex){
   };
 }
 
-for (var i = 0; i < 16; i++) {
+for (var i = 0; i < 64; i++) {
   var keyId = ("key_" + ("0000" + (i+1)).slice(-4));
   var theIndex = Math.floor(Math.random() * sampleNumbers.length);
   var theColor = controllerColors[Math.floor(Math.random() * controllerColors.length)]
