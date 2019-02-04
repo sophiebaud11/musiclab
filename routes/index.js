@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var musicCodeLinks = require('../data/music-code-links.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -33,5 +34,12 @@ router.get('/randomsamples', function(req, res, next) {
   res.render('grid-controller', { title: ("These are your samples"), sampleIds: randomSampleIds, randomSampleUrls: randomSampleUrls });
 })
 
+router.get('/links', function(req, res, next) {
+  res.render('links', {
+    title: 'the musicLab links',
+    data: musicCodeLinks,
+    message: 'Here are links to useful tutorials, tools, libraries, packages, etc.'
+  });
+});
 
 module.exports = router;

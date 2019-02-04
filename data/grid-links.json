@@ -1,15 +1,18 @@
 [
   {
     "title": "4 samples",
-    "url": "/grids/4"
+    "url": "/grids/4",
+    "text": ""
   },
   {
     "title": "16 samples",
-    "url": "/grids/16"
+    "url": "/grids/16",
+    "text": ""
   }
   ,
   {
     "title": "64 samples",
-    "url": "/grids/64"
+    "url": "/grids/64",
+    "text": ""
   }
 ]

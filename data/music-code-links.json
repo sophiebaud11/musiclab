@@ -1,0 +1,47 @@
+[
+  {
+    "title": "React Orchestra",
+    "url": "https://www.npmjs.com/package/react-orchestra",
+    "text": "Not frequently used, so who knows--but check it out."
+  },
+  {
+    "title": "Tone.js",
+    "url": "https://tonejs.github.io/",
+    "text": "We'll use this to build instruments and interactive musical elements."
+  },
+  {
+    "title": "React Music",
+    "url": "https://github.com/FormidableLabs/react-music",
+    "text": "Not sure if anyone uses this (very quiet on NPM)--but worth checking out."
+  },
+  {
+    "title": "Tone Rhythm",
+    "url": "https://www.npmjs.com/package/tone-rhythm",
+    "text": "Another infrequently downloaded npm package"
+  },
+  {
+    "title": "Expansive set of Tone.js tutorials",
+    "url": "https://www.guitarland.com/MusicTheoryWithToneJS/TonejsSetup.html",
+    "text": "Definitely check this one out--is more complete than Tone.js documentation in spots"
+  },
+  {
+    "title": "Tone.js on npm.",
+    "url": "https://www.npmjs.com/package/tone",
+    "text": "Pretty essential."
+  },
+  {
+    "title": "Npm webaudiofont.",
+    "url": "https://www.npmjs.com/package/webaudiofont",
+    "text": "??"
+  },
+  {
+    "title": "midi.js.",
+    "url": "https://github.com/mudcube/MIDI.js",
+    "text": "Worth a look."
+  },
+  {
+    "title": "midi.js sound fonts",
+    "url": "https://github.com/gleitz/midi-js-soundfonts",
+    "text": "if midi.js is worth it, this could be too."
+  }
+]
