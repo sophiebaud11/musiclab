@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
     records.forEach(function(record) {
         console.log('Retrieved', record.get('Song Title'));
     });
-    res.render('json', {title: "JSON of AT response", data: records});
+    res.render('nmt/song', {title: "JSON of AT response", data: records});
     // To fetch the next page of records, call `fetchNextPage`.
     // If there are more records, `page` will get called again.
     // If there are no more records, `done` will get called.

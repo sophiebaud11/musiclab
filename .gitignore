@@ -1,3 +1,6 @@
+# hidden data folder
+_hidden/
+
 # Logs
 logs
 *.log
