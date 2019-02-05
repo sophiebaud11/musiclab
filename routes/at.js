@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 router.get('/song/:id', function(req, res, next){
   base('New Music Tuesday').find(req.params.id, function(err, record) {
     if (err) { console.error(err); return; }
-    res.render('nmt/song', {title: "Song Title", data: record});
+    res.render('nmt/song', {title: record.fields['Song Title'], data: record});
   });
 })
 

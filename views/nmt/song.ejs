@@ -7,9 +7,9 @@
   <body>
     <h1><%= title %></h1>
     <p class="byline">
-      by <%= record.fields.Writer_Name[0] %>
+      by <%= data.fields.Artist %>
     </p>
-    <p><%= record.fields.Reflection %></p>
+    <p><%= data.fields.Reflection %></p>
     <pre><%- JSON.stringify(data, null, 4) %>
     </pre>
   </body>
