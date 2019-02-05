@@ -6,7 +6,10 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %>.  Here is your JSON.</p>
+    <p class="byline">
+      by <%= record.fields.Writer_Name[0] %>
+    </p>
+    <p><%= record.fields.Reflection %></p>
     <pre><%- JSON.stringify(data, null, 4) %>
     </pre>
   </body>

@@ -5,31 +5,24 @@ var base = new Airtable({apiKey: process.env.AIRTABLE_API_KEY}).base(process.env
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  var linksArray = [];
   console.log("got a request for airtable");
   console.log(process.env.AIRTABLE_API_KEY);
   console.log(process.env.AIRTABLE_MUSICLAB_BASE);
   base('New Music Tuesday').select({
     // Selecting the first 3 records in Grid view:
-    maxRecords: 20,
+    maxRecords: 50,
     view: "Recent"
-}).eachPage(function page(records, fetchNextPage) {
-    // This function (`page`) will get called for each page of records.
-
-    records.forEach(function(record) {
-        console.log('Retrieved', record.get('Song Title'));
-    });
-    res.render('nmt/song', {title: "JSON of AT response", data: records});
-    // To fetch the next page of records, call `fetchNextPage`.
-    // If there are more records, `page` will get called again.
-    // If there are no more records, `done` will get called.
-    fetchNextPage();
-
-}, function done(err) {
-    if (err) { console.error(err); res.send("got a request for AT, but hit API problem");  }
+  }).firstPage().then(result => {
+    res.render('nmt/links-to-songs', {title: "Recent Songs", message: "These are the links.", data: result});
+  });
 });
 
-
-
-});
+router.get('/song/:id', function(req, res, next){
+  base('New Music Tuesday').find(req.params.id, function(err, record) {
+    if (err) { console.error(err); return; }
+    res.render('nmt/song', {title: "Song Title", data: record});
+  });
+})
 
 module.exports = router;
