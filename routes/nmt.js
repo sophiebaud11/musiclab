@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
       dataForClient.push({
         title: result[i].fields["Song Title"],
         artist: result[i].fields.Artist,
-        url: ('/at/song/' + result[i].id),
+        url: ('/nmt/song/' + result[i].id),
         youtubeLink: result[i].fields.YouTube_URL,
       })
     }
