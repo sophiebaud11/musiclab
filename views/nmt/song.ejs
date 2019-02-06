@@ -7,10 +7,29 @@
   <body>
     <h1><%= title %></h1>
     <p class="byline">
-      by <%= data.fields.Artist %>
+      by <%= artist %>
     </p>
-    <p><%= data.fields.Reflection %></p>
-    <pre><%- JSON.stringify(data, null, 4) %>
-    </pre>
+
+    <iframe
+      width="560"
+      height="315"
+      src="<%= youTubeUrl %>"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+
+    <p><%= reflection %></p>
+    <h5 class="byline">
+      <%- author  %>
+    </h5>
+    <h5 class="date">
+      <%- date  %>
+    </h5>
+    <h5>notes</h5>
+    <p>
+      <%- notes %>
+    </p>
   </body>
 </html>

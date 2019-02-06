@@ -10,12 +10,11 @@
     <ol>
       <% for (var i = 0; i < data.length; i++) {  %>
         <li>
-          <a href= <%= ('/at/song/' + data[i].id) %> >
-            <%= data[i].fields["Song Title"] %> by <%= data[i].fields["Artist"] %>
-          </a>. YouTube link <a href= <%= data[i].fields.YouTube_URL %> >here</a>
+          <a href= <%= data[i].url %> >
+            <%= data[i].title %> by <%= data[i].artist %>
+          </a>. YouTube link <a href= "<%= data[i].youtubeLink %>" >here</a>
         </li>
       <%  } %>
     </ol>
-    <pre><%- JSON.stringify(data, null, 4) %>
   </body>
 </html>
