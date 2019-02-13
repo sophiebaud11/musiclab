@@ -23,11 +23,11 @@ exports.listPages = function(req, res, next) {
     for (var i = 0; i < result.length; i++) {
       dataForClient.push({
         title: result[i].fields.Title,
-        description: result[i].fields.visibleDescription,
+        text: result[i].fields.visibleDescription,
         url: ('/at/page/' + result[i].fields.pathBasename)
       })
     }
-    res.render('nmt/links-to-songs', {title: "Recent Songs", message: "These are the links.", data: dataForClient});
+    res.render('links', {title: "Custom Pages", message: "These are the pages we've created in Airtable so far.", data: dataForClient});
   });
 };
 
