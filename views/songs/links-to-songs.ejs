@@ -10,8 +10,9 @@
     <ol>
       <% for (var i = 0; i < data.length; i++) {  %>
         <li>
-          <a href= <%= data[i].url %>>
-            <%= data[i].title %></a>. <%= data[i].text %>
+          <a href= <%= data[i].url %> >
+            <%= data[i].title %> by <%= data[i].artist %>
+          </a>. YouTube link <a href= "<%= data[i].youtubeLink %>" >here</a>
         </li>
       <%  } %>
     </ol>

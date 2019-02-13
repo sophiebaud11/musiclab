@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+  <head>
+    <% include ../partials/vanillaHead.ejs %>
+  </head>
+  <body>
+    <% include ../partials/header.ejs %>
+    <div class="container">
+      <p>Welcome to <%= title %></p>
+      <p>
+        We're going to try to get everything organized here.
+      </p>
+      <h2>DATA</h2>
+      <p>
+          <%= JSON.stringify(data, null, 4) %>
+      </p>
+      <h2>COUNTS</h2>
+      <ul>
+        <li>Number of <a href="/database/people">people</a>: <%= data.person_count %></li>
+        <li>Number of <a href="/database/shoots">shoots</a>: <%= data.shoot_count %></li>
+        <li>Number of <a href="/database/segments">segments</a>: <%= data.segment_count %></li>
+        <li>Number of <a href="/database/moments">moments</a>: <%= data.moment_count %></li>
+        <li>Number of <a href="/database/slates">slates</a>: <%= data.slate_count %></li>
+        <li>Number of <a href="/database/clips">clips</a>: <%= data.clip_count %></li>
+      </ul>
+
+
+
+
+    </div>
+  <% include ../partials/foot.ejs %>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= data.title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1><%= data.title %></h1>
+    <p>Welcome to <%= data.title %></p>
+    <p>
+      <%= data.topText %>
+    </p>
+    <ul>
+      <% for ( i=0; i<data.youtubeResources.length; i++ ) {  %>
+        <li>
+          <a href="<%- data.youtubeResources[i].URL %>">
+            <%= data.youtubeResources[i].title %>
+          </a>: <%- data.youtubeResources[i].description %>
+        </li>
+      <%  } %>
+    </ul>
+
+    <p style="{font-size: 8px;}">
+      <%= data.notes %>
+    </p>
+    <h3>embeds</h3>
+    <% for ( i=0; i<data.youtubeResources.length; i++ ) {  %>
+      <p>
+        <%- data.youtubeResources[i].title %>
+        </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/<%= data.youtubeResources[i].youtubeId %>"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    <%  } %>
+  </body>
+</html>

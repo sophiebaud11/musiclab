@@ -1,0 +1,42 @@
+[
+  {
+    "title": "16 samples",
+    "url": "soundtracking/grid/0016",
+    "text": "This is maybe too simple"
+  },
+  {
+    "title": "64 samples",
+    "url": "soundtracking/grid/0064",
+    "text": "This is the best one."
+  },
+  {
+    "title": "256 samples",
+    "url": "soundtracking/grid/0256",
+    "text": "This is a good one."
+  },
+  {
+    "title": "1024 samples",
+    "url": "soundtracking/grid/1024",
+    "text": "This will take a while."
+  },
+  {
+    "title": "4096 samples",
+    "url": "soundtracking/grid/4096",
+    "text": "This will take a while and be unstable."
+  },
+  {
+    "title": "custom pages",
+    "url": "/at/pages",
+    "text": "All the custom pages people build in Airtable."
+  },
+  {
+    "title": "songs",
+    "url": "/at/songs",
+    "text": "All the songs in the AT db, organizable in different ways."
+  },
+  {
+    "title": "old nmt",
+    "url": "/at/nmt",
+    "text": "The first iteration of the NMT page--superceded by songs?"
+  }
+]

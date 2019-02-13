@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var musicCodeLinks = require('../data/music-code-links.json');
+var frontPageLinks = require('../data/front-page-links.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'the secret musicLab' });
+  res.render('links', { title: 'the secret musicLab', message: "Here are some links to stuff we've made so far.", data: frontPageLinks });
 });
 
 router.get('/samples/:sampleId', function(req, res, next) {
@@ -41,5 +42,6 @@ router.get('/links', function(req, res, next) {
     message: 'Here are links to useful tutorials, tools, libraries, packages, etc.'
   });
 });
+
 
 module.exports = router;
