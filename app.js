@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var gridsRouter = require('./routes/grids');
 var nmtRouter = require('./routes/nmt');
 var atRouter = require('./routes/at');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/grids', gridsRouter);
 app.use('/nmt', nmtRouter);
 app.use('/at', atRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

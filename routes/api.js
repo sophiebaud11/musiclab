@@ -9,20 +9,9 @@ var customPageController = require('../controllers/customPageController');
 // var writingController = require('../controllers/writingController');
 // var airtableController = require('../controllers/airtableController');
 
-router.get('/', airtableController.index);
-
-router.get('/songs', songController.listSongs);
-router.get('/song/:id', songController.getSong);
-
-router.get('/remixes', remixController.listRemixes);
-router.get('/remix/:id', remixController.getRemix);
-
-router.get('/pages', customPageController.listPages);
-router.get('/page/:id', customPageController.getPage);
-
-router.get('/api', apiController.getPage);
-router.get('/api/songs', apiController.getSongsList);
-router.get('/api/:id', apiController.getPage);
+router.get('/', apiController.getPage);
+router.get('/songs', apiController.getSongsList);
+router.get('/song/:id', apiController.getPage);
 
 
 //
