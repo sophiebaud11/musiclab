@@ -38,5 +38,10 @@
     "title": "old nmt",
     "url": "/at/nmt",
     "text": "The first iteration of the NMT page--superceded by songs?"
+  },
+  {
+    "title": "people",
+    "url": "/at/people",
+    "text": "An in-development page where (hopefully) you'll be able to see what your fellow LL employees have been working on!"
   }
 ]

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var songController = require('../controllers/songController');
+var personController = require('../controllers/personController.js')
 var airtableController = require('../controllers/airtableController');
 var apiController = require('../controllers/apiController');
 // var personController = require('../controllers/personController');
@@ -13,6 +14,10 @@ router.get('/', airtableController.index);
 
 router.get('/songs', songController.listSongs);
 router.get('/song/:id', songController.getSong);
+
+router.get('/people', personController.listPeople);
+router.get('/people/:id', personController.getPerson);
+
 
 router.get('/remixes', remixController.listRemixes);
 router.get('/remix/:id', remixController.getRemix);

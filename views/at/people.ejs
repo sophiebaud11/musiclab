@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= name %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <script type="text/javascript">
+      console.log(name);
+    </script>
+    <h1><%= name %></h1>
+    <p>
+      also known as <%= mlName %>
+    </p>
+    <% if (nmtid) { %>
+    <h1>Most Recent New Music Tuesday: <%= title %></h1>
+    <p class="byline">
+      by <%= artist %>
+    </p>
+
+    <iframe
+      width="560"
+      height="315"
+      src="<%= youTubeUrl %>"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+
+    <p><%= reflection %></p>
+    <h5 class="byline">
+      <%- author  %>
+    </h5>
+    <h5 class="date">
+      <%- date  %>
+    </h5>
+    <h5>notes</h5>
+    <p>
+      <%- notes %>
+    </p>
+    <% } else { %>
+    <h1>This person hasn't done a New Music Tuesday yet. Check back soon!</h1>
+    <% } %>
+  </body>
+</html>

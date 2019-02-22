@@ -7,7 +7,7 @@
     "devstart": "nodemon ./bin/www"
   },
   "dependencies": {
-    "airtable": "^0.5.8",
+    "airtable": "^0.5.9",
     "chalk": "^2.4.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
